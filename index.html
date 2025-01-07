@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="duck.png" type="image/png">
+    <meta name="description" content="The Duck Feeding Memecoin">
+
+    <title>$QUACKER - The Duck Feeding Memecoin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+        .description {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .milestone {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div style="
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-width: 600px;
+    ">
+        <strong>Contract Address:</strong> 
+        <span style="
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        ">Soon...</span>
+    </div>
+
+    <h1>🦆 $QUACKER 🦆</h1>
+    
+    <div class="video-container">
+        <video id="duckStream" autoplay loop muted>
+            <source src="videos/duck1.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <div class="description">
+        <h2>About $QUACKER</h2>
+        <p>Welcome to the world's first automated duck-feeding cryptocurrency! Our smart-connected feeders dispense more food 
+           as our market cap grows. Every $10K increase triggers additional food drops for our feathered friends! 🦆</p>
+
+        <h3>🎯 Automated Feeding System:</h3>
+        <div class="milestone">
+            <strong>Every $10K MCap:</strong> Triggers an automatic food drop at our main pond location
+        </div>
+        <div class="milestone">
+            <strong>$100K Market Cap:</strong> 
+            • Activates 2nd feeder location<br>
+            • Double food portions per drop<br>
+            • 24/7 live stream activation
+        </div>
+        <div class="milestone">
+            <strong>$500K Market Cap:</strong>
+            • Activates 5 more feeder locations<br>
+            • Triple food portions per drop<br>
+            • Smart feeding schedule based on duck population
+        </div>
+        <div class="milestone">
+            <strong>$1M Market Cap:</strong>
+            • 10 new feeding locations activated<br>
+            • Premium duck feed upgrade<br>
+            • Increased portions at all locations
+        </div>
+        <div class="milestone">
+            <strong>$5M Market Cap:</strong>
+            • Creation of $QUACKER Duck Sanctuary<br>
+            • Permanent feeding stations<br>
+            • Regular veterinary care for sanctuary ducks
+        </div>
+
+        <h3>🚀 Bonus Feeding Events:</h3>
+        <ul>
+            <li>24-Hour Volume Spike: Instant double drops</li>
+            <li>New ATH: 1-hour of continuous feeding</li>
+            <li>Successfully migrating on PumpFun: Extra food drop at all locations</li>
+            <li>Achieving King of the Hill: Triple portions for 3 hours</li>
+            <li>Maintaining top position for 24h: Mega feast across all locations!</li>
+        </ul>
+
+        <h3>🎥 Live Duck Cam</h3>
+        <p>Watch our automated feeders in action! The stream shows live footage from our various feeding locations.</p>
+    </div>
+
+    <script>
+        // Video playlist functionality
+        const videoPlayer = document.getElementById('duckStream');
+        const videoFiles = ['duck1.mp4', 'duck2.mp4', 'duck3.mp4'];
+        let currentVideoIndex = 0;
+
+        // Add error handling and logging
+        videoPlayer.addEventListener('error', function(e) {
+            console.error('Error playing video:', e);
+            console.error('Video error details:', videoPlayer.error);
+        });
+
+        videoPlayer.addEventListener('ended', function() {
+            console.log('Video ended, playing next video');
+            currentVideoIndex = (currentVideoIndex + 1) % videoFiles.length;
+            videoPlayer.src = 'videos/' + videoFiles[currentVideoIndex];
+            videoPlayer.play().catch(function(error) {
+                console.log("Play failed:", error);
+            });
+        });
+
+        // Log initial video load
+        console.log('Initial video source:', videoPlayer.src);
+    </script>
+</body>
+</html>
